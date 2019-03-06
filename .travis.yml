@@ -4,5 +4,5 @@ install:
   - nuget restore ConsoleApp2.sln
   - nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
 script:
-  - msbuild /p:Configuration=Release solution-name.sln
+  - msbuild /p:Configuration=Release ConsoleApp2.sln
   - mono ./testrunner/xunit.runners.1.9.2/tools/xunit.console.clr4.exe ./ConsoleApp2.Tests/bin/Release/ConsoleApp2.Tests.dll
